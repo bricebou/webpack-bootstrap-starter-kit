@@ -1,9 +1,7 @@
 const path = require('path');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
-const PurgecssPlugin = require('purgecss-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/js/main.js',
   plugins: [new miniCssExtractPlugin()],
   output: {
@@ -37,13 +35,6 @@ module.exports = {
           },
           {
             loader: 'postcss-loader',
-            // options: {
-            //   postcssOptions: {
-            //     plugins: () => [
-            //       require('autoprefixer')
-            //     ]
-            //   }
-            // }
           },
           {
             loader: 'sass-loader'
