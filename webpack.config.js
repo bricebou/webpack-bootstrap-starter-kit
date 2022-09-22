@@ -13,8 +13,7 @@ module.exports = {
     port: 8080,
     hot: true,
     devMiddleware: {
-      serverSideRender: true,
-      writeToDisk: true,
+      publicPath: '/assets',
     },
   },
   module: {
