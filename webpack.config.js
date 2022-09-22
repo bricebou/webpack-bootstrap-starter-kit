@@ -9,9 +9,13 @@ module.exports = {
     path: path.resolve(__dirname, 'public/assets')
   },
   devServer: {
-    static: path.resolve(__dirname, 'public/assets'),
+    static: path.resolve(__dirname, 'public/'),
     port: 8080,
-    hot: true
+    hot: true,
+    devMiddleware: {
+      serverSideRender: true,
+      writeToDisk: true,
+    },
   },
   module: {
     rules: [
